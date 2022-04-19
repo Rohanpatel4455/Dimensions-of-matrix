@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+ main()
+{
+int a[50][50],b[50][50],c[50][50],i,j,r,co;
+clrscr();
+printf("Enter dimension of matrix:");
+scanf("%d%d",&r,&co);
+printf("Enter Elements of first matrix:");
+for(i=0;i<r;i++)
+{
+   for(j=0;j<co;j++)
+   {
+        scanf("%d",&a[i][j]);
+   }
+}
+printf("Enter Elements of second matrix:");
+for(i=0;i<r;i++)
+{
+    for(j=0;j<co;j++)
+    {
+        scanf("%d",&b[i][j]);
+    }
+}
+for(i=0;i<r;i++)
+{
+     for(j=0;j<co;j++)
+     {
+         c[i][j]=a[i][j]-b[i][j];
+     }
+}
+printf("\nFirst Matrix:\n");
+for(i=0;i<r;i++)
+{
+     for(j=0;j<co;j++)
+     {
+      printf(" %d ",a[i][j]);
+     }
+printf("\n");
+}
+printf("\nSecond Matrix:\n");
+for(i=0;i<r;i++)
+{
+     for(j=0;j<co;j++)
+     {
+       printf(" %d ",b[i][j]);
+     }
+printf("\n");
+}
+printf("\nSubtraction of Matrices:\n");
+for(i=0;i<r;i++)
+{
+    for(j=0;j<co;j++)
+    {
+       printf(" %d ",c[i][j]);
+    }
+printf("\n");
+}
+getch();
+}
